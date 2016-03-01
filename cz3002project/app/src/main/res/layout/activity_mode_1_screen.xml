@@ -67,17 +67,17 @@
         android:id="@+id/mode1_submitbutton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="@drawable/mode1_2"
-
+        android:onClick="change_image"
         />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_above="@+id/mode1_rg"
         android:layout_below="@+id/mode1_textView"
-        android:src="@drawable/mode1_1"
+        android:layout_gravity="center_horizontal"
+
          />
 
 </RelativeLayout>

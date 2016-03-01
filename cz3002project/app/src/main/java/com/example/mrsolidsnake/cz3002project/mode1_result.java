@@ -1,7 +1,9 @@
 package com.example.mrsolidsnake.cz3002project;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class mode1_result extends AppCompatActivity {
@@ -24,8 +26,11 @@ public class mode1_result extends AppCompatActivity {
         mode_1_screen.correct=0;
         mode_1_screen.wrong=0;
 
+    }
 
-
+    public void go_to_mode_selection(View view){
+        Intent mode1_button = new Intent(this , Mode_Selection_Screen.class);
+        startActivity(mode1_button);
     }
 
 
