@@ -22,4 +22,11 @@ public class Mode_Selection_Screen extends AppCompatActivity {
         Intent mode2_button = new Intent(this , mode_2_screen.class);
         startActivity(mode2_button);
     }
+
+    public void go_to_main_menu(View view){
+        Intent mm_button = new Intent(this , MainPage.class);
+        startActivity(mm_button);
+    }
+
+
 }

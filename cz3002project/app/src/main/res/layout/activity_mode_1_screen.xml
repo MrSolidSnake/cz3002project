@@ -67,7 +67,7 @@
         android:id="@+id/mode1_submitbutton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="change_image"
+
         />
 
     <ImageView

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class mode_1_screen extends AppCompatActivity {
 
@@ -31,7 +32,6 @@ public class mode_1_screen extends AppCompatActivity {
     private int currentImage=0;
     private int numImage=5;
 
-
     int mode1_flag;
     public static int correct,wrong;
 
@@ -50,12 +50,12 @@ public class mode_1_screen extends AppCompatActivity {
         mode1_rb3=(RadioButton)findViewById(R.id.mode1_radioButton3);
         mode1_iv =(ImageView)findViewById(R.id.imageView2);
 
+
         mode1_tv.setText(mode1_questions[mode1_flag]);
         mode1_rb1.setText(mode1_option[0]);
         mode1_rb2.setText(mode1_option[1]);
         mode1_rb3.setText(mode1_option[2]);
         mode1_iv.setImageResource(images[currentImage]);
-
 
         mode1_btn_next.setOnClickListener(new View.OnClickListener()
 
@@ -75,10 +75,12 @@ public class mode_1_screen extends AppCompatActivity {
                 if(ansText.equalsIgnoreCase(mode1_ans[mode1_flag]))
                 {
                     correct++;
+                    Toast.makeText(getApplicationContext(),"You are correct",Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
                     wrong++;
+                    Toast.makeText(getApplicationContext(),"Wrong answer =(",Toast.LENGTH_SHORT).show();
                 }
                 mode1_flag++;
                 if(mode1_flag<mode1_questions.length)
@@ -92,6 +94,7 @@ public class mode_1_screen extends AppCompatActivity {
                 }
                 else
                 {
+                    mode1_iv.setImageResource(0);       // set imageview to use no resource
                     Intent gotomode1_result = new Intent(getApplicationContext(),mode1_result.class);
                     startActivity(gotomode1_result);
                 }
@@ -99,6 +102,9 @@ public class mode_1_screen extends AppCompatActivity {
 
             }
         });
+        // new method below
+
+
 
     }
 

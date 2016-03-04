@@ -43,4 +43,14 @@
         android:onClick="mainmenustartgame"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Photo"
+        android:id="@+id/uploadphoto_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/MainStartGame_button"
+        android:layout_alignStart="@+id/MainStartGame_button"
+        android:onClick="mainmenuuploadphoto"/>
+
 </RelativeLayout>
