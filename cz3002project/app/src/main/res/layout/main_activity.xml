@@ -28,7 +28,7 @@
         android:layout_below="@+id/textView"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
-        android:onClick="gototutorial"
+        android:onClick="goToTutorial"
         />
 
     <Button
@@ -40,7 +40,7 @@
         android:layout_below="@+id/instruction_button"
         android:layout_alignLeft="@+id/instruction_button"
         android:layout_alignStart="@+id/instruction_button"
-        android:onClick="mainmenustartgame"
+        android:onClick="startGame"
         />
 
     <Button
@@ -51,6 +51,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/MainStartGame_button"
         android:layout_alignStart="@+id/MainStartGame_button"
-        android:onClick="mainmenuuploadphoto"/>
+        android:onClick="loadPhoto"/>
 
 </RelativeLayout>

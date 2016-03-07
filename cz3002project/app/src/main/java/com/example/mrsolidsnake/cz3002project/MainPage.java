@@ -11,22 +11,22 @@ public class MainPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_page);
+        setContentView(R.layout.main_activity);
     }
 
-    public void gototutorial(View view){
-        Intent tutorial_button = new Intent(this , Instruction_Page.class);
+    public void goToTutorial(View view){
+        Intent tutorial_button = new Intent(this , InstructionPage.class);
         startActivity(tutorial_button);
     }
 
-    public void mainmenustartgame(View view){
-        Intent mainmenustartgame_button = new Intent(this , Mode_Selection_Screen.class);
-        startActivity(mainmenustartgame_button);
+    public void startGame(View view){
+        Intent startGameIntent = new Intent(this , ModeSelectionScreen.class);
+        startActivity(startGameIntent);
     }
 
-    public void mainmenuuploadphoto(View view){
-        Intent mainmenuuploadphoto_button = new Intent(this , upload_photo.class);
-        startActivity(mainmenuuploadphoto_button);
+    public void loadPhoto(View view){
+        Intent loadPhotoActivityIntent = new Intent(this , upload_photo.class);
+        startActivity(loadPhotoActivityIntent);
     }
 
 }

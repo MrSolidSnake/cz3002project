@@ -20,11 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Instruction_Page" />
-        <activity android:name=".Mode_Selection_Screen" />
-        <activity android:name=".mode_1_screen" />
+        <activity android:name=".InstructionPage" />
+        <activity android:name=".ModeSelectionScreen" />
+        <activity android:name=".ClassicMode" />
         <activity android:name=".mode_2_screen" />
-        <activity android:name=".mode1_result" />
+        <activity android:name=".ClassicModeResult" />
         <activity android:name=".upload_photo" />
         <activity android:name=".camera_mode" />
         <activity android:name=".load_fromdirmode"></activity>

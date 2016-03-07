@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import java.io.File;
 
-public class Instruction_Page extends AppCompatActivity {
+public class InstructionPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

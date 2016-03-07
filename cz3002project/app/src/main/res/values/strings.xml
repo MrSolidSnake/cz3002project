@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">cz3002project</string>
+    <string name="question">Who is this?</string>
+    <string name="correct_alert">You are correct!</string>
+    <string name="wrong_alert">Sorry you are wrong...</string>
+    <string name="correct_answer">"Correct Ans : "</string>
+    <string name="wrong_answer">"Wrong Ans : "</string>
+    <string name="final_score">"Final Score : "</string>
 </resources>

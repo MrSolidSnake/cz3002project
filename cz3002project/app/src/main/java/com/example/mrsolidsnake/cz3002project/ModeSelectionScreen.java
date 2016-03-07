@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class Mode_Selection_Screen extends AppCompatActivity {
+public class ModeSelectionScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,8 +13,8 @@ public class Mode_Selection_Screen extends AppCompatActivity {
         setContentView(R.layout.activity_mode__selection__screen);
     }
 
-    public void go_to_mode_1(View view){
-        Intent mode1_button = new Intent(this , mode_1_screen.class);
+    public void goToClassicMode(View view){
+        Intent mode1_button = new Intent(this , ClassicMode.class);
         startActivity(mode1_button);
     }
 
@@ -23,7 +23,7 @@ public class Mode_Selection_Screen extends AppCompatActivity {
         startActivity(mode2_button);
     }
 
-    public void go_to_main_menu(View view){
+    public void goToMainMenu(View view){
         Intent mm_button = new Intent(this , MainPage.class);
         startActivity(mm_button);
     }
