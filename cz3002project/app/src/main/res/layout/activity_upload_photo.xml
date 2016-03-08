@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.mrsolidsnake.cz3002project.upload_photo">
+    tools:context=".ApplicatonModes.UploadPhoto">
 
     <Button
         android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
         android:layout_alignStart="@+id/loadimagefromdevice_button"
         android:layout_alignRight="@+id/loadimagefromdevice_button"
         android:layout_alignEnd="@+id/loadimagefromdevice_button"
-        android:onClick="cameramode"/>
+        android:onClick="cameraMode"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -30,6 +30,6 @@
         android:layout_below="@+id/usecamera_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="82dp"
-        android:onClick="loadfromdirectorymode"/>
+        android:onClick="loadFromDirectoryMode"/>
 
 </RelativeLayout>

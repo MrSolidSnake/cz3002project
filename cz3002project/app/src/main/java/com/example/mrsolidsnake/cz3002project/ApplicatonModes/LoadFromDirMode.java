@@ -1,9 +1,11 @@
-package com.example.mrsolidsnake.cz3002project;
+package com.example.mrsolidsnake.cz3002project.ApplicatonModes;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class load_fromdirmode extends AppCompatActivity {
+import com.example.mrsolidsnake.cz3002project.R;
+
+public class LoadFromDirMode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

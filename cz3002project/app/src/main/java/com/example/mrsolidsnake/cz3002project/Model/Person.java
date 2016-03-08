@@ -1,13 +1,13 @@
-package com.example.mrsolidsnake.cz3002project;
+package com.example.mrsolidsnake.cz3002project.Model;
 
 /**
  * Created by User on 07/03/2016.
  */
 public class Person {
-    long id;
-    String name;
-    String picture;
-    String[]answers;
+    private long id;
+    private String name;
+    private String picture;
+    private String[]answers;
 
 
     public Person(long id, String name, String picture, String[] answers) {

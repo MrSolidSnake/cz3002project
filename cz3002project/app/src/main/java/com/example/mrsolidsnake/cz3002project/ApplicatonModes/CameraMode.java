@@ -1,4 +1,4 @@
-package com.example.mrsolidsnake.cz3002project;
+package com.example.mrsolidsnake.cz3002project.ApplicatonModes;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -14,6 +14,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.mrsolidsnake.cz3002project.Menus.MainPage;
+import com.example.mrsolidsnake.cz3002project.R;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,13 +24,13 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class camera_mode extends AppCompatActivity {
+public class CameraMode extends AppCompatActivity {
 
-    ImageView imgView;
-    static final int REQUEST_TAKE_PHOTO = 1;
-    String mCurrentPhotoPath;
+    private ImageView imgView;
+    private String mCurrentPhotoPath;
 
-    static String strSDCardPathName = Environment.getExternalStorageDirectory() + "/temp_picture" + "/";
+    public static final int REQUEST_TAKE_PHOTO = 1;
+    public static String strSDCardPathName = Environment.getExternalStorageDirectory() + "/temp_picture" + "/";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -152,8 +155,8 @@ public class camera_mode extends AppCompatActivity {
         return true;
     }
 
-    public void go_to_main_menu(View view){
-        Intent mm_button = new Intent(this , MainPage.class);
-        startActivity(mm_button);
+    public void goToMainMenu(View view){
+        Intent mmButton = new Intent(this , MainPage.class);
+        startActivity(mmButton);
     }
 }

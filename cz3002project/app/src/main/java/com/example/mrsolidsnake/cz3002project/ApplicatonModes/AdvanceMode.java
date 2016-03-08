@@ -1,9 +1,11 @@
-package com.example.mrsolidsnake.cz3002project;
+package com.example.mrsolidsnake.cz3002project.ApplicatonModes;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class mode_2_screen extends AppCompatActivity {
+import com.example.mrsolidsnake.cz3002project.R;
+
+public class AdvanceMode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.example.mrsolidsnake.cz3002project;
+package com.example.mrsolidsnake.cz3002project.ApplicatonModes;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.mrsolidsnake.cz3002project.Menus.ModeSelectionScreen;
+import com.example.mrsolidsnake.cz3002project.R;
+
 public class ClassicModeResult extends AppCompatActivity {
 
-    TextView resultTxtView;
+    private TextView resultTxtView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +31,8 @@ public class ClassicModeResult extends AppCompatActivity {
     }
 
     public void goToModeSelection(View view){
-        Intent mode1_button = new Intent(this , ModeSelectionScreen.class);
-        startActivity(mode1_button);
+        Intent classicModeButton = new Intent(this , ModeSelectionScreen.class);
+        startActivity(classicModeButton);
     }
 
 

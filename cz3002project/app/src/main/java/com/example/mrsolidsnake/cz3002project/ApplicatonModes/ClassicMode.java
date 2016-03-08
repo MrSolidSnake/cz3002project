@@ -1,4 +1,4 @@
-package com.example.mrsolidsnake.cz3002project;
+package com.example.mrsolidsnake.cz3002project.ApplicatonModes;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,18 +11,22 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mrsolidsnake.cz3002project.Helper.MySQLiteHelper;
+import com.example.mrsolidsnake.cz3002project.Model.Person;
+import com.example.mrsolidsnake.cz3002project.R;
+
 import java.util.ArrayList;
 
 public class ClassicMode extends AppCompatActivity {
 
-    TextView questionTextView;
-    Button nextBtn;
-    RadioGroup answersRadGrp;
-    RadioButton answer1RadBtn, answer2RadBtn, answer3RadBtn;
-    ImageView personImgView;
+    private TextView questionTextView;
+    private Button nextBtn;
+    private RadioGroup answersRadGrp;
+    private RadioButton answer1RadBtn, answer2RadBtn, answer3RadBtn;
+    private ImageView personImgView;
 
 
-    int currentPerson = 0;
+    private int currentPerson = 0;
     public static int numberOfCorrect, numberOfWrong;
 
 

@@ -1,9 +1,12 @@
-package com.example.mrsolidsnake.cz3002project;
+package com.example.mrsolidsnake.cz3002project.Menus;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.mrsolidsnake.cz3002project.R;
+import com.example.mrsolidsnake.cz3002project.ApplicatonModes.UploadPhoto;
 
 
 public class MainPage extends AppCompatActivity {
@@ -15,8 +18,8 @@ public class MainPage extends AppCompatActivity {
     }
 
     public void goToTutorial(View view){
-        Intent tutorial_button = new Intent(this , InstructionPage.class);
-        startActivity(tutorial_button);
+        Intent tutorialButton = new Intent(this , InstructionPage.class);
+        startActivity(tutorialButton);
     }
 
     public void startGame(View view){
@@ -25,7 +28,7 @@ public class MainPage extends AppCompatActivity {
     }
 
     public void loadPhoto(View view){
-        Intent loadPhotoActivityIntent = new Intent(this , upload_photo.class);
+        Intent loadPhotoActivityIntent = new Intent(this , UploadPhoto.class);
         startActivity(loadPhotoActivityIntent);
     }
 

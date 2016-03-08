@@ -1,9 +1,13 @@
-package com.example.mrsolidsnake.cz3002project;
+package com.example.mrsolidsnake.cz3002project.Menus;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.example.mrsolidsnake.cz3002project.ApplicatonModes.AdvanceMode;
+import com.example.mrsolidsnake.cz3002project.ApplicatonModes.ClassicMode;
+import com.example.mrsolidsnake.cz3002project.R;
 
 public class ModeSelectionScreen extends AppCompatActivity {
 
@@ -18,14 +22,14 @@ public class ModeSelectionScreen extends AppCompatActivity {
         startActivity(mode1_button);
     }
 
-    public void go_to_mode_2(View view){
-        Intent mode2_button = new Intent(this , mode_2_screen.class);
-        startActivity(mode2_button);
+    public void goToAdvanceMode(View view){
+        Intent advance_mode_button = new Intent(this , AdvanceMode.class);
+        startActivity(advance_mode_button);
     }
 
     public void goToMainMenu(View view){
-        Intent mm_button = new Intent(this , MainPage.class);
-        startActivity(mm_button);
+        Intent mmButton = new Intent(this , MainPage.class);
+        startActivity(mmButton);
     }
 
 

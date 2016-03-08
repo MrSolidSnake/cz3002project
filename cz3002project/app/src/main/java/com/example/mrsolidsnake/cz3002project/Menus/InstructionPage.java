@@ -1,4 +1,4 @@
-package com.example.mrsolidsnake.cz3002project;
+package com.example.mrsolidsnake.cz3002project.Menus;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+
+import com.example.mrsolidsnake.cz3002project.R;
 
 import java.io.File;
 
