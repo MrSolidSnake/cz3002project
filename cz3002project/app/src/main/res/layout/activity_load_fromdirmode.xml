@@ -9,4 +9,58 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ApplicatonModes.LoadFromDirMode">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadImageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_image_title"
+        android:id="@+id/chooseImageBtn"
+        android:layout_below="@+id/uploadImageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/correct_answer_title"
+        android:id="@+id/correctAnsEditText"
+        android:layout_below="@+id/chooseImageBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/alternative_answer_title"
+        android:id="@+id/altAns1EditText"
+        android:layout_below="@+id/correctAnsEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/alternative_answer_title"
+        android:id="@+id/altAns2EditText"
+        android:layout_below="@+id/altAns1EditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:inputType="text"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_btn_title"
+        android:id="@+id/submitBtn"
+        android:layout_below="@+id/altAns2EditText"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

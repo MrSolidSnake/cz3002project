@@ -3,7 +3,14 @@
     <string name="question">Who is this?</string>
     <string name="correct_alert">You are correct!</string>
     <string name="wrong_alert">Sorry you are wrong...</string>
-    <string name="correct_answer">"Correct Ans : "</string>
-    <string name="wrong_answer">"Wrong Ans : "</string>
-    <string name="final_score">"Final Score : "</string>
+    <string name="correct_answer">Correct Ans : </string>
+    <string name="wrong_answer">Wrong Ans : </string>
+    <string name="final_score">Final Score : </string>
+    <string name="submit_btn_title">Upload</string>
+    <string name="correct_answer_title">Correct Answer</string>
+    <string name="alternative_answer_title">Alternative Answer</string>
+    <string name="choose_image_title">Choose Image</string>
+    <string name="empty_answer_alert">Please fill in all possible answers</string>
+    <string name="added_success_alert">New question added successfully</string>
+    <string name="no_selection_alert">Please make decision!</string>
 </resources>

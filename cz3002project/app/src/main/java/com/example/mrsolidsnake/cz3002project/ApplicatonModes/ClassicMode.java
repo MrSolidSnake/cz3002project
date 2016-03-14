@@ -1,6 +1,7 @@
 package com.example.mrsolidsnake.cz3002project.ApplicatonModes;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,10 +16,10 @@ import com.example.mrsolidsnake.cz3002project.Helper.MySQLiteHelper;
 import com.example.mrsolidsnake.cz3002project.Model.Person;
 import com.example.mrsolidsnake.cz3002project.R;
 
+import java.net.URI;
 import java.util.ArrayList;
 
 public class ClassicMode extends AppCompatActivity {
-
     private TextView questionTextView;
     private Button nextBtn;
     private RadioGroup answersRadGrp;
@@ -43,18 +44,20 @@ public class ClassicMode extends AppCompatActivity {
         answer3RadBtn =(RadioButton)findViewById(R.id.classic_mode_ans_3_rad_btn);
         personImgView =(ImageView)findViewById(R.id.classic_mode_person_img_view);
 
-        //fetch all persons from database
+        /**
+         * load all persons from database
+         * TODO: Change the order of persons randomly
+         */
         MySQLiteHelper dbManager = MySQLiteHelper.getInstance(this);
         ArrayList<Person> persons = dbManager.getAllPerson();
         final ArrayList<Person> finalPersons = persons;
 
+        //load first person
         questionTextView.setText(getString (R.string.question));
         answer1RadBtn.setText(persons.get(currentPerson).getAnswers()[0]);
         answer2RadBtn.setText(persons.get(currentPerson).getAnswers()[1]);
         answer3RadBtn.setText(persons.get(currentPerson).getAnswers()[2]);
-        String uri = "@drawable/" + persons.get(currentPerson).getPicture();
-        int imageResource = getResources().getIdentifier(uri, null, getPackageName());
-        personImgView.setImageResource(imageResource);
+        loadPersonImage(persons.get(currentPerson).getPicture());
 
 
         nextBtn.setOnClickListener(new View.OnClickListener()
@@ -62,31 +65,37 @@ public class ClassicMode extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-                RadioButton userAnsRadBtn = (RadioButton) findViewById(answersRadGrp.getCheckedRadioButtonId());
-                String ansText = userAnsRadBtn.getText().toString();
-                if(ansText.equalsIgnoreCase(finalPersons.get(currentPerson).getName())){
-                    numberOfCorrect++;
-                    Toast.makeText(getApplicationContext(), getString(R.string.correct_alert), Toast.LENGTH_SHORT).show();
+                if(answersRadGrp.getCheckedRadioButtonId() != -1){
+                    RadioButton userAnsRadBtn = (RadioButton) findViewById(answersRadGrp.getCheckedRadioButtonId());
+                    String ansText = userAnsRadBtn.getText().toString();
+                    if(ansText.equalsIgnoreCase(finalPersons.get(currentPerson).getName())){
+                        numberOfCorrect++;
+                        Toast.makeText(getApplicationContext(), getString(R.string.correct_alert), Toast.LENGTH_SHORT).show();
+                    }else{
+                        numberOfWrong++;
+                        Toast.makeText(getApplicationContext(), getString(R.string.wrong_alert), Toast.LENGTH_SHORT).show();
+                    }
+                    //check if all questions have been answered, if yes then move to result mode
+                    if(currentPerson < finalPersons.size() - 1){
+                        currentPerson++;
+                        nextQuestion(finalPersons.get(currentPerson));
+                    }else{
+                        personImgView.setImageResource(0);       // set imageview to use no resource
+                        Intent gotomode1_result = new Intent(getApplicationContext(), ClassicModeResult.class);
+                        startActivity(gotomode1_result);
+                    }
                 }else{
-                    numberOfWrong++;
-                    Toast.makeText(getApplicationContext(), getString(R.string.wrong_alert), Toast.LENGTH_SHORT).show();
-                }
-                if(currentPerson < finalPersons.size() - 1){
-                    currentPerson++;
-                    nextQuestion(finalPersons.get(currentPerson));
-                }else{
-                    personImgView.setImageResource(0);       // set imageview to use no resource
-                    Intent gotomode1_result = new Intent(getApplicationContext(), ClassicModeResult.class);
-                    startActivity(gotomode1_result);
+                    Toast.makeText(getApplicationContext(), R.string.no_selection_alert, Toast.LENGTH_LONG).show();
                 }
 
             }
         });
-        // new method below
-
-
     }
 
+    /**
+     * load new data for next question
+     * @param person
+     */
     public void nextQuestion(Person person){
         //change answer
         int numberOfRadBtn = answersRadGrp.getChildCount();
@@ -98,9 +107,23 @@ public class ClassicMode extends AppCompatActivity {
         }
 
         //change image
-        String uri = "@drawable/" + person.getPicture();
-        int imageResource = getResources().getIdentifier(uri, null, getPackageName());
-        personImgView.setImageResource(imageResource);
+        loadPersonImage(person.getPicture());
+    }
+
+    /**
+     * Load image, used for both default and user-upload images
+     * @param image
+     */
+    public void loadPersonImage(String image){
+        if(!image.contains("://")){
+            //this image is in drawable folder
+            String uri = "@drawable/" + image;
+            int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+            personImgView.setImageResource(imageResource);
+        }else{
+            //this image is uploaded by users
+            personImgView.setImageURI(Uri.parse(image));
+        }
     }
 
     public static int getNumberOfCorrect(){
