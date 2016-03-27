@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ApplicatonModes.AdvanceMode">
+    tools:context=".ApplicatonModes.AdvanceMode"
+    android:background="#fb0404">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,8 +17,7 @@
         android:text="Large Text"
         android:id="@+id/advance_mode_question_txt_view"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"

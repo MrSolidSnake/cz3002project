@@ -7,50 +7,68 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Menus.MainPage">
+    tools:context=".Menus.MainPage"
+    android:background="#fb0404">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Who Am I ?"
+        android:textSize="60sp"
         android:id="@+id/textView"
+        android:layout_marginTop="30dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Instructions"
+        android:textSize="40sp"
         android:id="@+id/instruction_button"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
         android:onClick="goToTutorial"
-        />
+        android:layout_below="@+id/MainStartGame_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/MainStartGame_button"
+        android:layout_alignEnd="@+id/MainStartGame_button" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Game"
+        android:textSize="40sp"
         android:id="@+id/MainStartGame_button"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/instruction_button"
-        android:layout_alignLeft="@+id/instruction_button"
-        android:layout_alignStart="@+id/instruction_button"
         android:onClick="startGame"
-        />
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="38dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Upload Photo"
+        android:textSize="40sp"
         android:id="@+id/uploadphoto_button"
+        android:onClick="loadPhoto"
+        android:layout_below="@+id/instruction_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="61dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="CZ3002 Nirvana Group. All rights reserved."
+        android:id="@+id/textView2"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/MainStartGame_button"
-        android:layout_alignStart="@+id/MainStartGame_button"
-        android:onClick="loadPhoto"/>
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

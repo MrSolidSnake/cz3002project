@@ -7,29 +7,53 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ApplicatonModes.UploadPhoto">
+    tools:context=".ApplicatonModes.UploadPhoto"
+    android:background="#fb0404">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Who Am I ?"
+        android:textSize="60sp"
+        android:id="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Camera"
+        android:textSize="35sp"
         android:id="@+id/usecamera_button"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="51dp"
-        android:layout_alignLeft="@+id/loadimagefromdevice_button"
-        android:layout_alignStart="@+id/loadimagefromdevice_button"
+        android:onClick="cameraMode"
+        android:layout_above="@+id/loadimagefromdevice_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/loadimagefromdevice_button"
-        android:layout_alignEnd="@+id/loadimagefromdevice_button"
-        android:onClick="cameraMode"/>
+        android:layout_alignEnd="@+id/loadimagefromdevice_button" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Load from device"
+        android:textSize="35sp"
         android:id="@+id/loadimagefromdevice_button"
-        android:layout_below="@+id/usecamera_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="82dp"
-        android:onClick="loadFromDirectoryMode"/>
+        android:onClick="loadFromDirectoryMode"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="CZ3002 Nirvana Group. All rights reserved."
+        android:id="@+id/textView6"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

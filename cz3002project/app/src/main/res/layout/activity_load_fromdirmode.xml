@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ApplicatonModes.LoadFromDirMode">
+    tools:context=".ApplicatonModes.LoadFromDirMode"
+    android:background="#fb0404">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -61,6 +62,18 @@
         android:text="@string/submit_btn_title"
         android:id="@+id/submitBtn"
         android:layout_below="@+id/altAns2EditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="CZ3002 Nirvana Group. All rights reserved."
+        android:id="@+id/textView4"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
