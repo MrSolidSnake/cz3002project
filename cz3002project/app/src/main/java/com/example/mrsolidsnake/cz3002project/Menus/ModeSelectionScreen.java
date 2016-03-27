@@ -14,7 +14,7 @@ public class ModeSelectionScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mode__selection__screen);
+        setContentView(R.layout.activity_mode_selection_screen);
     }
 
     public void goToClassicMode(View view){

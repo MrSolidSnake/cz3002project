@@ -25,6 +25,7 @@
         <activity android:name=".Menus.ModeSelectionScreen" />
         <activity android:name=".ApplicatonModes.ClassicMode" />
         <activity android:name=".ApplicatonModes.AdvanceMode" />
+        <activity android:name=".ApplicatonModes.AdvanceModeResult" />
         <activity android:name=".ApplicatonModes.ClassicModeResult" />
         <activity android:name=".ApplicatonModes.UploadPhoto" />
         <activity android:name=".ApplicatonModes.CameraMode" />

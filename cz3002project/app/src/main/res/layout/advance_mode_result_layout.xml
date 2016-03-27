@@ -7,14 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ApplicatonModes.ClassicModeResult">
+    tools:context=".ApplicatonModes.AdvanceModeResult">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/classic_mode_result_txt_view"
+        android:id="@+id/advance_mode_result_txt_view"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="113dp" />
@@ -23,9 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play Again?"
-        android:id="@+id/classic_mode_reset_button"
+        android:id="@+id/advance_mode_reset_button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="72dp"
-        android:onClick="goToModeSelection"/>
+        android:onClick="goToModeSelectionFromAdvanceMode"/>
 </RelativeLayout>

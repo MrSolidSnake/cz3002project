@@ -17,7 +17,6 @@ public class ClassicModeResult extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.classic_mode_result_layout);
-
         resultTxtView =(TextView)findViewById(R.id.classic_mode_result_txt_view);
 
         StringBuffer sb = new StringBuffer();
@@ -27,13 +26,10 @@ public class ClassicModeResult extends AppCompatActivity {
         resultTxtView.setText(sb);
 
         ClassicMode.resetScore();
-
     }
 
-    public void goToModeSelection(View view){
-        Intent classicModeButton = new Intent(this , ModeSelectionScreen.class);
+    public void goToModeSelection(View view) {
+        Intent classicModeButton = new Intent(this, ModeSelectionScreen.class);
         startActivity(classicModeButton);
     }
-
-
 }

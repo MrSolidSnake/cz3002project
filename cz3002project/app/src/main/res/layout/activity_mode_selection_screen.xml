@@ -12,7 +12,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Mode 1"
+        android:text="Classic Mode"
         android:id="@+id/button"
         android:layout_marginTop="73dp"
         android:layout_alignParentTop="true"
@@ -24,7 +24,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Mode 2"
+        android:text="Advanced Mode"
         android:id="@+id/button2"
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"

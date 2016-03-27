@@ -16,7 +16,7 @@ public class InstructionPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_instruction__page);
+        setContentView(R.layout.activity_instruction_page);
 
         File imgFile = new File(Environment.getExternalStorageDirectory()+File.separator+"temp_picture");
 
