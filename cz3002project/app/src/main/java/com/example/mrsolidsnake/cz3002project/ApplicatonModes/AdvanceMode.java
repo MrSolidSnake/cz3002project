@@ -16,6 +16,7 @@ import com.example.mrsolidsnake.cz3002project.Model.Person;
 import com.example.mrsolidsnake.cz3002project.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AdvanceMode extends AppCompatActivity {
     private TextView questionTextView;
@@ -37,6 +38,7 @@ public class AdvanceMode extends AppCompatActivity {
 
         MySQLiteHelper dbManager = MySQLiteHelper.getInstance(this);
         ArrayList<Person> persons = dbManager.getAllPerson();
+        Collections.shuffle(persons);
         final ArrayList<Person> finalPersons = persons;
 
         //load first person
@@ -50,7 +52,8 @@ public class AdvanceMode extends AppCompatActivity {
                 if (ansText.equals("")) {
                     Toast.makeText(getApplicationContext(), getString(R.string.empty_alert), Toast.LENGTH_SHORT).show();
                 } else {
-                    if (finalPersons.get(currentPerson).getName().toLowerCase().contains(ansText)) {
+                    String correctAnswer = finalPersons.get(currentPerson).getName().toLowerCase();
+                    if (checkPattern(correctAnswer, ansText)) {
                         numberOfCorrect++;
                         Toast.makeText(getApplicationContext(), getString(R.string.correct_alert), Toast.LENGTH_SHORT).show();
                     } else {
@@ -69,6 +72,13 @@ public class AdvanceMode extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public boolean checkPattern(String correctAnswer, String answer){
+        for(String name: correctAnswer.split(" ")){
+            if(name.equals(answer)) return true;
+        }
+        return false;
     }
 
     public void nextQuestion(Person person) {
