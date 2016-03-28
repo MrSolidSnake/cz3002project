@@ -18,6 +18,8 @@ import com.example.mrsolidsnake.cz3002project.R;
 
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class ClassicMode extends AppCompatActivity {
     private TextView questionTextView;
@@ -50,6 +52,7 @@ public class ClassicMode extends AppCompatActivity {
          */
         MySQLiteHelper dbManager = MySQLiteHelper.getInstance(this);
         ArrayList<Person> persons = dbManager.getAllPerson();
+        Collections.shuffle(persons);
         final ArrayList<Person> finalPersons = persons;
 
         //load first person

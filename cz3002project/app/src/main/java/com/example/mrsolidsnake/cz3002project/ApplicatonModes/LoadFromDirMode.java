@@ -85,6 +85,9 @@ public class LoadFromDirMode extends AppCompatActivity {
         if (resultCode == RESULT_OK) {
             if (requestCode == SELECT_PICTURE) {
                 selectedImageUri = data.getData();
+                getContentResolver().takePersistableUriPermission(selectedImageUri,
+                        Intent.FLAG_GRANT_READ_URI_PERMISSION |
+                                Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
                 final ImageView imageDisplayImgView = (ImageView) findViewById(R.id.uploadImageView);
                 imageDisplayImgView.setImageURI(selectedImageUri);
             }
